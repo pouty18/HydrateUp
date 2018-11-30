@@ -12,6 +12,7 @@
 		A75EC92D21B1D28E0026905F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75EC92B21B1D28E0026905F /* Main.storyboard */; };
 		A75EC92F21B1D2900026905F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A75EC92E21B1D2900026905F /* Assets.xcassets */; };
 		A75EC93221B1D2900026905F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75EC93021B1D2900026905F /* LaunchScreen.storyboard */; };
+		A7ECA06121B1DA4E0053EDEB /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7ECA06021B1DA4E0053EDEB /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		A75EC92E21B1D2900026905F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A75EC93121B1D2900026905F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A75EC93321B1D2900026905F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7ECA06021B1DA4E0053EDEB /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		A7ECA06221B1DA4E0053EDEB /* HydrateUp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HydrateUp.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7ECA06121B1DA4E0053EDEB /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +44,7 @@
 			children = (
 				A75EC92621B1D28E0026905F /* HydrateUp */,
 				A75EC92521B1D28E0026905F /* Products */,
+				A7ECA05F21B1DA4E0053EDEB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +59,7 @@
 		A75EC92621B1D28E0026905F /* HydrateUp */ = {
 			isa = PBXGroup;
 			children = (
+				A7ECA06221B1DA4E0053EDEB /* HydrateUp.entitlements */,
 				A75EC92721B1D28E0026905F /* AppDelegate.swift */,
 				A75EC92921B1D28E0026905F /* ViewController.swift */,
 				A75EC92B21B1D28E0026905F /* Main.storyboard */,
@@ -62,6 +68,14 @@
 				A75EC93321B1D2900026905F /* Info.plist */,
 			);
 			path = HydrateUp;
+			sourceTree = "<group>";
+		};
+		A7ECA05F21B1DA4E0053EDEB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7ECA06021B1DA4E0053EDEB /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +110,11 @@
 				TargetAttributes = {
 					A75EC92321B1D28E0026905F = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -280,6 +299,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HydrateUp/HydrateUp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F763AG2R49;
 				INFOPLIST_FILE = HydrateUp/Info.plist;
@@ -298,6 +318,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HydrateUp/HydrateUp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F763AG2R49;
 				INFOPLIST_FILE = HydrateUp/Info.plist;
