@@ -34,6 +34,10 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSHealthShareUsageDescription</key>
+	<string>HydrateUp adds your Hydration Intake to the Health App.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>HydrateUp adds your Hydration Intake to the Health App.</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
